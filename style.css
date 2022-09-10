@@ -17,7 +17,6 @@ h1{
 }
 p{
     line-height: 1.5;
-    font-size: 16px;
 }
 li{
     list-style-type: none;
@@ -28,6 +27,9 @@ html{
 a {
     text-decoration: none;
     color: black;
+}
+nav {
+    width: 100%;
 }
 
 button:hover {
@@ -43,12 +45,14 @@ button:hover {
     overflow: hidden;
 }
 
-/*.row {
-    width: 100vw;
-    max-width: 1200px;
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    padding: 2rem;
-} */
+} 
 
 button {
     background-color: #6415ff;
@@ -74,9 +78,22 @@ img {
 NAV
 
 */
+
 #landing {
     margin: 8px;
+    width: 100%;
+    position: relative;
+}
 
+.row__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__lists {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .t__logo {
@@ -90,7 +107,17 @@ NAV
 }
 
 .Treact {
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-bottom:0.5rem;
+    font-weight: 600;
+    letter-spacing: 00.025em;
+    transition-duration: 300ms;
+    padding-bottom: 0.25rem;
+    border-bottom: 0.25rem;
+    border-color: transparent;
     display: flex;
+    justify-content: flex-start;
     -webkit-box-align: center;
     align-items: center;
     border-bottom-width: 0px;
@@ -100,6 +127,11 @@ NAV
     margin: 0 24px 0 0;
     margin-left: 0 !important;
     padding: 0 0 4px;
+}
+
+.Treact img {
+    width: 2.5rem;
+    margin-right: 0.75rem;
 }
 
 .nav__logo {
@@ -117,46 +149,25 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
 }
 
 .nav__list {
     width: 100%;
-    font: 14px;
     color: #243e63;
     font-weight: 600;
     letter-spacing: 0.025em;
     transition-duration: 300ms;
-    margin: 0 24px;
+    margin: 0 16px;
     padding:  0 0 4px 0.25rem;
     border-bottom-width: 2px;
     border-color: transparent;
-}
-
-.nav__options {
-    width: 70%;
-    max-width: 700px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.row__nav {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    max-width: 1280px;
-    margin: 24px;
 }
 
 .nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.list__space {
-    margin: 0 1.5rem;
 }
 
 .nav__list {
@@ -168,6 +179,13 @@ nav {
 MAIN
 
 */
+
+#section1 {
+    position: relative;
+    margin: 4px;
+    width: 100%;
+    height: 100%;
+}
 
 .part1 {
     width: 40%;
@@ -181,16 +199,6 @@ MAIN
     justify-content: center;
 }
 
-.section__img {
-    width: 60%;
-    position: relative;
-    margin-top: 3rem;
-    flex: 1 1 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .parent2 {
     display: flex;
@@ -246,16 +254,41 @@ MAIN
 
 .small__img {
     width: 100%;
+    height: 100%;
     opacity: 0.5;
-    margin-top: 1rem;
+    margin-top: 1rem 0 0;
     padding: 0 0 64px 0;
 }
 
+.section__img {
+    position: relative;
+    margin-top: 3rem;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.img__wrapper {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
 .big__img {
-    margin: 10px;
-    width: 95%;
+    min-width: 0px;
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    padding: 4px;
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
+    .big__img {
+        max-width: 48rem;
+    }
 }
