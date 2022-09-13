@@ -31,6 +31,7 @@ img {
     vertical-align: middle;
     width: 100%;
     height: 100%;
+    border: 1px solid transparent;
 }
 header {
     width: 100%;
@@ -79,12 +80,9 @@ button {
     width: 50%;
     display: flex;
     flex-direction: column;
+    padding-right: 3rem;
 }
 
-.section__img {
-    width: 50%;
-    margin-left: 16px;
-}
 
 .description__secondary {
     width: 100%;
@@ -263,6 +261,10 @@ MAIN
     padding: 5rem 4px;
 }
 
+.section--space {
+
+}
+
 .section__tile {
     font-weight: 700;
     font-size: 1.875rem, 36px;
@@ -320,10 +322,9 @@ MAIN
     font-weight: 700;
 }
 .section__img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     position: relative;
-    margin-top: 3rem;
     flex: 1 1 0%;
     display: flex;
     flex-direction: column;
@@ -548,6 +549,72 @@ STEPS
     line-height: 1;
 }
 
+/*
+
+Values
+
+*/
+
+.values__secondary {
+    display: flex;
+}
+
+.values__descriptions {
+    width: 50%;
+    display: flex;
+}
+
+.values__description--title {
+    text-align: left;
+    display: flex;
+}
+
+.v_d-title {
+    width: 50%;
+    display: flex;
+}
+
+.v1 {
+    background-color: #9ae6b4;
+    padding: 8px;
+    flex-shrink: 0 ;
+    display: inline-block;
+    border: 0px solid transparent;
+    border-radius: 50%;
+}
+
+.v1-2 {
+    background-color: #feb2b2;
+    padding: 8px;
+    flex-shrink: 0 ;
+    display: inline-block;
+    border: 0px solid transparent;
+    border-radius: 50%;
+}
+
+.v-sign {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.v2 {
+    color: #243e63;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 12px;
+}
+
+.v_d-description {
+    color: #718096;
+    font-size: 16px;
+    margin: 16px 0 0;
+    line-height: 1.625;
+}
+
+
 @media (max-width: 1080px) {
     .nav__lists {
         display: none;
@@ -607,6 +674,10 @@ STEPS
     }
 
     .description {
+        font-size: 16px;
+    }
+
+    .v_d-description {
         font-size: 16px;
     }
 
@@ -682,6 +753,10 @@ STEPS
         font-size: 14px;
     }
 
+    .v_d-description {
+        font-size: 14px;
+    }
+
     .steps__body {
         display: flex;
         flex-direction: column;
@@ -699,6 +774,8 @@ STEPS
 
     .steps--para {
         text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
 
 }
@@ -720,9 +797,7 @@ STEPS
         font-size: 30px;
     }
 
-    .description {
-        font-size: 14px;
-    }
+    
 
     
 }
